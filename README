@@ -1,7 +1,3 @@
-== CalStomp
-
-This is a little community calendar built on Rails and MongoMapper.  We're doing this open source-style so SCAD kids (and whoever else wants to) can help us get it done in time for Geekend in November.
-
 == Getting Started
 
 There's not much here, but we'll eventually be using the following:
