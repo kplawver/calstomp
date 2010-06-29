@@ -1,0 +1,9 @@
+== Calstomp
+
+This is the (very) beginnings of an open source community app.  I'll be working on it with some friends and hopefully launch the first version before Geekend (November 2010).  It'll use Rails, MongoMapper and other fun stuff as we get around to it.  If you'd like to help, jump right in.
+
+What I know you'll need right now:
+
+# A MongoDB to talk to.  If you're on OS X, just download it from http://mongodb.org.  If you're on Windows or 32-bit Linux, I'd go with a small free database on MongoHQ (http://mongohq.com)
+# A Janrain Engage account and API key: http://www.janrain.com/products/engage/get-janrain-engage - don't worry, the basic package is free and it saves you having to implement Facebook and Twitter auth and OpenID.
+# Eventually, you'll need an S3 account so you can upload things with Paperclip.  We may end up using Gravatar for profile icons, but hey, it doesn't hurt to get an S3 account - http://aws.amazon.com
