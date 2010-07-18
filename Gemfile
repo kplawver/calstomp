@@ -31,3 +31,7 @@ gem 'rpx_now'
 # group :test do
 #   gem 'webrat'
 # end
+
+group :development do
+	gem "awesome_print", :require => "ap"
+end
