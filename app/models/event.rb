@@ -15,7 +15,7 @@ class Event
 	key :tags, Array
 	
 	ensure_index :user_id
-	ensure_index :lat, :long, :starts_at, :tags
+	ensure_index [[:lat,1], [:long,1], [:starts_at,1], [:tags,1]]
 	
 	validates_presence_of :title
 	validates_presence_of :starts_at

@@ -16,4 +16,9 @@ Calstomp::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
+
+  config.to_prepare do 
+	MongoMapper.database="calstomp_development"
+  end
+
 end
