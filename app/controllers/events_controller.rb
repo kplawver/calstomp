@@ -4,6 +4,20 @@ class EventsController < ApplicationController
 	before_filter :require_ownership, :except => [:index, :show, :new]
 
 	def index
+		@today = Event.today(params[:page])
+		@tomorrow = Event.tomorrow(params[:page])
+		@week = Event.week(params[:page])
+	end
+	
+	def today
+		@events = Event.today(params[:page])
+	end
+	
+	def tomorrow
+		
+	end
+	
+	def week
 		
 	end
 	
@@ -12,7 +26,7 @@ class EventsController < ApplicationController
 	end
 	
 	def new
-		
+		@event = Event.new
 	end
 	
 	def create
