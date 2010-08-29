@@ -1,0 +1,22 @@
+<%= form_for(@event) do |f| %>
+	<%= f.error_messages %>
+	<fieldset>
+		<legend>Required Details</legend>
+		<ul>
+			<li><%= f.label :summary %> <%= f.text_field :summary %></li>
+			<li><%= f.label :location %> <%= f.text_field :location %></li>	
+			<li><%= f.label :dtstart, "When does it start?" %> <%= f.datetime_select :dtstart %> (if you don't select an end time, we'll default the event to 3 hours)</li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<legend>Flowery Extras</legend>
+		<ul>
+			<li><%= f.label :dtend, "When does it end?" %> <%= f.datetime_select :dtend %></li>
+			<li><%= f.label :description %> <%= f.text_area :description %></li>
+			<li><%= f.label :tags %> <%= f.text_field :tags %></li>
+			<li><%= f.label :url, "Event Homepage (if it has one)" %> <%= f.text_field :url %></li>
+			<li><%= f.label :hashtag, "Event hashtag (for finding posts on twitter)" %> <%= f.text_field :hashtag %></li>
+		</ul>
+	</fieldset>
+	<p class="buttons"><%= f.submit %></p>
+<% end %>

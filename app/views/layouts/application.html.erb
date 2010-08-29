@@ -7,8 +7,29 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<header id="site-header">
+	<h1><%= @product_name || "Product Name" %></h1>
+	<nav class="primary">
+		<ul>
+			<li><%= link_to "Register", '#' %></li>
+		</ul>
+	</nav>
+	<section class="add-event-limited">
+		
+	</section>
+</header>
+<section id="site-section">
 <%= yield %>
-
+</section>
+<footer id="site-footer">
+	<nav class="primary">
+		<ul>
+			<li><%= link_to "My Events", '#' %></li>
+			<li><%= link_to "My Account", '#' %></li>
+			<li><%= link_to "Categories", '#' %></li>
+			<li><%= link_to "Calendar", '#' %></li>
+		</ul>
+	</nav>
+</footer>
 </body>
 </html>
