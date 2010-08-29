@@ -5,7 +5,7 @@ gem 'bson'
 gem 'bson_ext'
 gem 'mongo_mapper'
 gem 'hpricot'
-gem 'paperclip'
+#gem 'paperclip'
 gem 'rpx_now'
 
 # Bundle edge Rails instead:

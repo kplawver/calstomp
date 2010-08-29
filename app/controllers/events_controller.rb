@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 	before_filter :require_logged_in, :except => [:index,:show]
-	before_filter :get_event, :except => [:index, :new]
+	before_filter :get_event, :except => [:index, :new, :create]
 	before_filter :require_ownership, :except => [:index, :show, :new]
 
 	def index
@@ -30,7 +30,14 @@ class EventsController < ApplicationController
 	end
 	
 	def create
-		
+		@event = Event.new(params[:event])
+		if @event.save
+			flash[:notice] = "You did it!  Congratulations!"
+			redirect_to edit_url(@event.id)
+		else
+			flash[:error] = "There were some problems creating your event.  Please fix the problems below and try again"
+			render :template => "new" and return
+		end
 	end
 	
 	def edit
